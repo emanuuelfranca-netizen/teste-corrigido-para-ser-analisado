@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:10000"
+    environment:
+      SECRET_KEY: troque-esta-chave
+      DATABASE_URL: sqlite:////data/fivecom.db
+    volumes:
+      - fivecom_data:/data
+volumes:
+  fivecom_data:
